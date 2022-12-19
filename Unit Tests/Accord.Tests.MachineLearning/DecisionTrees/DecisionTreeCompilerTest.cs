@@ -30,7 +30,7 @@ namespace Accord.Tests.MachineLearning
     public class DecisionTreeCompilerTest
     {
 
-#if !NET35 && !NO_DATA_TABLE
+#if !NO_DATA_TABLE
         [Test]
         public void CreateTest()
         {

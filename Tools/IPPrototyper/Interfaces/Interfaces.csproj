@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AForge.Imaging.IPPrototyper</RootNamespace>
     <AssemblyName>AForge.Imaging.IPPrototyper</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>AForge.Imaging.IPPrototyper.snk</AssemblyOriginatorKeyFile>

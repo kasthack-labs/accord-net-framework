@@ -158,9 +158,7 @@ namespace Accord.MachineLearning
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int[] getNearestIndices(TInput input, out double[] distances)
         {
             double[] d = this.distanceCache.Value;

@@ -40,9 +40,7 @@ namespace Accord.MachineLearning
     public class CentroidCluster<TCollection, TData, TCluster> : CentroidCluster<TCollection, TData, TData, TCluster>
         where TCollection : ICentroidClusterCollection<TData, TCluster>, IMulticlassScoreClassifier<TData, int>
         where TCluster : CentroidCluster<TCollection, TData, TCluster>, new()
-#if !NETSTANDARD1_4
         where TData : ICloneable
-#endif
     {
 
         [Serializable]

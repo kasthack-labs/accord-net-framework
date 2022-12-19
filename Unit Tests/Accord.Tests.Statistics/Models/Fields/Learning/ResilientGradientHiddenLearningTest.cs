@@ -369,13 +369,8 @@ namespace Accord.Tests.Statistics.Models.Fields
                 Assert.AreEqual(10, m1.Classes);
                 Assert.AreEqual(10, m2.Classes);
 
-#if NET35
-            Assert.AreEqual(0.89594053744997137d, trainAcc, 1e-5);
-            Assert.AreEqual(0.89605017347211102d, testAcc, 1e-5);
-#else
                 Assert.IsTrue(trainAcc.IsEqual(0.81532304173813608, 1e-5) || trainAcc.IsEqual(0.81532304173813608, 1e-5));
                 Assert.IsTrue(testAcc.IsEqual(0.77061649319455561, 1e-5) || testAcc.IsEqual(0.77061649319455561, 1e-5));
-#endif
             }
         }
     }

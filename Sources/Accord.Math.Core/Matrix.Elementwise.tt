@@ -120,9 +120,7 @@ namespace Accord.Math
         ///   Elementwise <#=name#>.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=method#>(this <#=a#>[] value)
         {
             return <#=method#>(value, new <#=r#>[value.Length]);
@@ -132,9 +130,7 @@ namespace Accord.Math
         ///   Elementwise <#=name#>.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=method#>(this <#=a#>[,] value)
         {
             return <#=method#>(value, MatrixCreateAs<<#=a#>, <#=r#>>(value));
@@ -144,9 +140,7 @@ namespace Accord.Math
         ///   Elementwise <#=name#>.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=method#>(this <#=a#>[][] value)
         {
             return <#=method#>(value, JaggedCreateAs<<#=a#>, <#=r#>>(value));
@@ -173,9 +167,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=method#>(this <#=a#>[] value, <#=r#>[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -195,9 +187,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=method#>(this <#=a#>[,] value, <#=r#>[,] result)
         {
             unsafe
@@ -226,9 +216,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=method#>(this <#=a#>[][] value, <#=r#>[][] result)
         {
             unsafe 
@@ -273,9 +261,7 @@ namespace Accord.Math
         /// <param name="value">A matrix.</param>
         /// <param name="y">A power.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=method#>(this <#=a#>[] value, double y)
         {
             return <#=method#>(value, y, new <#=r#>[value.Length]);
@@ -288,9 +274,7 @@ namespace Accord.Math
         /// <param name="value">A matrix.</param>
         /// <param name="y">A power.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=method#>(this <#=a#>[,] value, double y)
         {
             return <#=method#>(value, y, MatrixCreateAs<<#=a#>, <#=r#>>(value));
@@ -303,9 +287,7 @@ namespace Accord.Math
         /// <param name="value">A matrix.</param>
         /// <param name="y">A power.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=method#>(this <#=a#>[][] value, double y)
         {
             return <#=method#>(value, y, JaggedCreateAs<<#=a#>, <#=r#>>(value));
@@ -333,9 +315,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=method#>(this <#=a#>[] value, double y, <#=r#>[] result)
         {
             for (int i = 0; i < value.Length; i++)
@@ -356,9 +336,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=method#>(this <#=a#>[,] value, double y, <#=r#>[,] result)
         {
             unsafe
@@ -388,9 +366,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as <paramref name="value"/> to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=method#>(this <#=a#>[][] value, double y, <#=r#>[][] result)
         {
             unsafe 

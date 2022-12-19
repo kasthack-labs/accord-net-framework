@@ -84,17 +84,10 @@ namespace Accord.DataSets
         /// 
         /// <value>The video names in this dataset.</value>
         /// 
-#if NET35 || NET40 || NET45 || MONO
-        public string[] VideoNames
-        {
-            get { return videoNames.Keys.ToArray(); }
-        }
-#else
         public IReadOnlyCollection<string> VideoNames
         {
             get { return videoNames.Keys; }
         }
-#endif
 
         /// <summary>
         ///   Downloads and prepares the test videos dataset.
@@ -142,11 +135,7 @@ namespace Accord.DataSets
 
             if (!File.Exists(downloadedFileName))
             {
-#if NET35
-                if (!StringEx.IsNullOrWhiteSpace(this.path))
-#else
                 if (!String.IsNullOrWhiteSpace(this.path))
-#endif
                     Directory.CreateDirectory(this.path);
 
                 using (var client = ExtensionMethods.NewWebClient())

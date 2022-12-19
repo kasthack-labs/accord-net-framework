@@ -149,13 +149,8 @@ namespace Accord {
                     have_audio = false;
                     encode_audio = false;
 
-#if NET35
-                    memset(&video_st, 0, sizeof(video_st));
-                    memset(&audio_st, 0, sizeof(audio_st));
-#else
                     video_st = { 0 };
                     audio_st = { 0 };
-#endif
 
                     // Defaults
                     m_output_audio_codec = AudioCodec::Default;
@@ -227,12 +222,7 @@ namespace Accord {
                         }
 
                         c->channels = av_get_channel_layout_nb_channels(c->channel_layout);
-#if NET35
-                        ost->st->time_base.num = 1;
-                        ost->st->time_base.den = c->sample_rate;
-#else
                         ost->st->time_base = { 1, c->sample_rate };
-#endif
                         break;
 
                     case AVMEDIA_TYPE_VIDEO:
@@ -248,13 +238,8 @@ namespace Accord {
                         // timebase should be 1/framerate and timestamp increments should be
                         // identical to 1.
                         //ost->st->time_base = { 1, STREAM_FRAME_RATE };
-#if NET35
-                        ost->st->time_base.num = m_output_video_frame_rate.Denominator;
-                        ost->st->time_base.den = m_output_video_frame_rate.Numerator;
-#else
                         ost->st->time_base = { m_output_video_frame_rate.Denominator, 
                                                m_output_video_frame_rate.Numerator   };
-#endif
                         c->time_base = ost->st->time_base;
 
                         c->gop_size = 12; // emit one intra frame every twelve frames at most

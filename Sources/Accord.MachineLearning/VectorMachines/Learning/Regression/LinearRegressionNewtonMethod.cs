@@ -168,9 +168,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseSupportVectorRegression<TModel, TKernel, TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         TrustRegionNewtonMethod tron;

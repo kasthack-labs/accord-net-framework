@@ -156,17 +156,10 @@ namespace Accord.DataSets
         /// 
         /// <value>The image names in this dataset.</value>
         /// 
-#if NET35 || NET40
-        public string[] ImageNames
-        {
-            get { return (string[])imageNames.Clone(); }
-        }
-#else
         public IReadOnlyList<string> ImageNames
         {
             get { return imageNames; }
         }
-#endif
 
         /// <summary>
         ///   Gets or sets whether images with non-standard color palettes (i.e. 8-bpp images where
@@ -222,11 +215,7 @@ namespace Accord.DataSets
 
             Bitmap bmp;
 
-#if NET35
-            if (!StringEx.IsNullOrWhiteSpace(this.path))
-#else
             if (!String.IsNullOrWhiteSpace(this.path))
-#endif
                 Directory.CreateDirectory(this.path);
 
             if (opencv.Contains(name))

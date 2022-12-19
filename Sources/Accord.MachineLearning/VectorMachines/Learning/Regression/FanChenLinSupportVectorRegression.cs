@@ -95,9 +95,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         : BaseSupportVectorRegression<TModel, TKernel, TInput>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private double[] alpha;

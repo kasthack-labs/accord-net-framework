@@ -143,9 +143,7 @@ namespace Accord.Math
         ///   Compares two values for equality, considering a relative acceptance threshold.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         [Obsolete("Use IsEqual(a, b, rtol) with the named parameter rtol instead.")]
         public static bool IsRelativelyEqual(this double a, double b, double threshold)
         {
@@ -163,13 +161,11 @@ namespace Accord.Math
         {
             if (Object.Equals(objA, objB))
                 return true;
-#if !NETSTANDARD1_4
             if (objA is DBNull)
                 objA = null;
 
             if (objB is DBNull)
                 objB = null;
-#endif
             if (objA == null ^ objB == null)
                 return false;
 
@@ -214,7 +210,6 @@ namespace Accord.Math
             Type typeA = objA.GetType();
             Type typeB = objB.GetType();
 
-#if !NETSTANDARD1_4
 
             MethodInfo equals = typeof(Matrix).GetMethod("IsEqual", new Type[] {
                     typeA, typeB, typeof(double), typeof(double)
@@ -226,7 +221,6 @@ namespace Accord.Math
 
             if (equals != _this)
                 return (bool)equals.Invoke(null, new object[] { objA, objB, atol, rtol });
-#endif
 
             // Base case: arrays contain elements of same nature (both arrays, or both values)
             if (typeA.GetElementType().IsArray == typeB.GetElementType().IsArray)
@@ -697,11 +691,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[] elements)
         {
-#if NETSTANDARD1_4
-            return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
             return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>
@@ -710,11 +700,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[][] elements)
         {
-#if NETSTANDARD1_4
-            return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
             return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>
@@ -723,11 +709,7 @@ namespace Accord.Math
         /// 
         public static int GetSizeInBytes<T>(this T[,] elements)
         {
-#if NETSTANDARD1_4
-            return elements.GetNumberOfElements() * Marshal.SizeOf<T>();
-#else
             return elements.GetNumberOfElements() * Marshal.SizeOf(typeof(T));
-#endif
         }
 
         /// <summary>

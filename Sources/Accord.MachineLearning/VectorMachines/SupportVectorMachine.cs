@@ -91,9 +91,7 @@ namespace Accord.MachineLearning.VectorMachines
     /// <seealso cref="Accord.MachineLearning.VectorMachines.Learning.SequentialMinimalOptimization{TKernel}"/>
     ///
     [Serializable]
-#if !NETSTANDARD1_4
     [SerializationBinder(typeof(SupportVectorMachine.SupportVectorMachineBinder))]
-#endif
     public class SupportVectorMachine : SupportVectorMachine<Linear>,
         IBinaryClassifier<double[]>, ISupportVectorMachine<double[]>
     {
@@ -126,7 +124,6 @@ namespace Accord.MachineLearning.VectorMachines
         }
 
 #region Serialization backwards compatibility
-#if !NETSTANDARD1_4
         internal class SupportVectorMachineBinder : SerializationBinder
         {
             public override Type BindToType(string assemblyName, string typeName)
@@ -195,7 +192,6 @@ namespace Accord.MachineLearning.VectorMachines
 
 #pragma warning restore 0169
 #pragma warning restore 0649
-#endif
 #endregion
 
 

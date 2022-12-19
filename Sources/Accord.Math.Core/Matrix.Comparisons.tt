@@ -216,9 +216,7 @@ namespace Accord.Math
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(<#=a#>[] a, <#=b#>[] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[]", "[]", "[]")#>
@@ -245,9 +243,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(<#=a#>[,] a, <#=b#>[,] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[,]", "[,]", "[,]")#>
@@ -282,9 +278,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(<#=a#>[,] a, <#=b#>[][] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[,]", "[][]", "[][]")#>
@@ -314,9 +308,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(<#=a#>[][] a, <#=b#>[,] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[][]", "[,]", "[][]")#>
@@ -346,9 +338,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(<#=a#>[][] a, <#=b#>[][] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[][]", "[][]", "[][]")#>
@@ -387,9 +377,7 @@ namespace Accord.Math
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(<#=a#>[] a, <#=b#> b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[]", "", "[]")#>
@@ -416,9 +404,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(<#=a#>[,] a, <#=b#> b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[,]", "", "[,]")#>
@@ -452,9 +438,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(<#=a#>[][] a, <#=b#> b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
 <#=reference(a, b, r, "[][]", "", "[][]")#>
@@ -503,9 +487,7 @@ namespace Accord.Math
         ///   Determines whether two vectors contain the same values.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[] Equals(<#=a#> a, <#=b#>[] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -515,9 +497,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[,] Equals(<#=a#> a, <#=b#>[,] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
             return Equals(b, a, rtol, atol);
@@ -527,9 +507,7 @@ namespace Accord.Math
         ///   Determines whether two matrices contain the same values.
         /// </summary>
         ///
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static bool[][] Equals(<#=a#> a, <#=b#>[][] b, <#=ta#> atol = 0, <#=tr#> rtol = 0)
         {
             return Equals(b, a, rtol, atol);

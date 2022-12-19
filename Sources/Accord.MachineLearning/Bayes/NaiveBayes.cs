@@ -397,7 +397,6 @@ namespace Accord.MachineLearning.Bayes
             return imax;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Saves the Naïve Bayes model to a stream.
         /// </summary>
@@ -487,7 +486,6 @@ namespace Accord.MachineLearning.Bayes
         {
             return Accord.IO.Serializer.Load<NaiveBayes<TDistribution>>(path);
         }
-#endif
 #endregion
 
 

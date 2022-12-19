@@ -365,7 +365,6 @@ namespace Accord.MachineLearning.VectorMachines
             get { return Models[0][0].IsProbabilistic; }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Saves the machine to a stream.
         /// </summary>
@@ -417,7 +416,6 @@ namespace Accord.MachineLearning.VectorMachines
         {
             return Accord.IO.Serializer.Load<MulticlassSupportVectorMachine>(path);
         }
-#endif
         #endregion
 
 

@@ -124,9 +124,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class OneclassSupportVectorLearning<TKernel, TInput>
         : BaseOneclassSupportVectorLearning<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors

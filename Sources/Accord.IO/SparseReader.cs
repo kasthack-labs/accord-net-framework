@@ -159,20 +159,12 @@ namespace Accord.IO
 
         private void createReader(string path)
         {
-#if NETSTANDARD1_4
-            this.reader = new StreamReader(new FileStream(path, FileMode.Open));
-#else
             this.reader = new StreamReader(path);
-#endif
         }
 
         private void createReader(string path, System.Text.Encoding encoding)
         {
-#if NETSTANDARD1_4
-            this.reader = new StreamReader(new FileStream(path, FileMode.Open), encoding);
-#else
             this.reader = new StreamReader(path);
-#endif
         }
 
         /// <summary>

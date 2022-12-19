@@ -26,7 +26,7 @@
 		<DocumentationFile>$(SolutionDir)..\Release\$(Configuration)\$(AssemblyName).XML</DocumentationFile>
 		<CodeAnalysisLogFile>$(SolutionDir)..\Release\$(Configuration)\$(AssemblyName).dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
 		
-		<TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
 	</PropertyGroup>
 
   <Target Name="SpicNSpan"  AfterTargets="Clean">

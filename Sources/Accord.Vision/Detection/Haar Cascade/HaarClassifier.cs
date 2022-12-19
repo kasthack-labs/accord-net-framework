@@ -163,9 +163,7 @@ namespace Accord.Vision.Detection
         ///   Detects the presence of an object in a given window.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public bool Compute(IntegralImage2 image, Rectangle rectangle)
         {
             int x = rectangle.X;

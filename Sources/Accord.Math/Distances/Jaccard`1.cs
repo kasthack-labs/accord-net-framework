@@ -66,9 +66,7 @@ namespace Accord.Math.Distances
         ///   to the distance function implemented by this class.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Distance(T[] x, T[] y)
         {
             int inter = 0;
@@ -96,9 +94,7 @@ namespace Accord.Math.Distances
         /// 
         /// <returns>A similarity measure between x and y.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Similarity(T[] x, T[] y)
         {
             int inter = 0;

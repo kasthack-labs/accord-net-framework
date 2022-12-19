@@ -833,11 +833,7 @@ namespace Accord.Tests.Statistics
                 var cm = new GeneralConfusionMatrix(predicted: predicted, expected: outputs);
 
                 double acc = cm.Accuracy;
-#if NET35
-            Assert.AreEqual(0.53030303030303028d, acc, 1e-10);
-#else
                 Assert.AreEqual(0.53030303030303028d, acc, 1e-10);
-#endif
             }
         }
 
@@ -920,13 +916,8 @@ namespace Accord.Tests.Statistics
             double testAcc = m2.Accuracy; // should be 0.8130504403522818
             #endregion
 
-#if NET35
-            Assert.AreEqual(0.89594053744997137d, trainAcc, 1.5e-2);
-            Assert.AreEqual(0.89605017347211102d, testAcc, 1.5e-2);
-#else
             Assert.AreEqual(0.84962835906232137, trainAcc, 1.5e-2);
             Assert.AreEqual(0.8130504403522818, testAcc, 1.5e-2);
-#endif
         }
 
 

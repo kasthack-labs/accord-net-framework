@@ -158,9 +158,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void GetFeatureVectorTest()
         {
             var images = GetImages();
@@ -208,9 +205,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void learn_new()
         {
             #region doc_learn
@@ -330,9 +324,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void custom_clustering_test()
         {
             #region doc_clustering
@@ -431,9 +422,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void custom_feature_test()
         {
             #region doc_feature
@@ -608,9 +596,6 @@ namespace Accord.Tests.Imaging
         }
 
         [Test, Category("Random")]
-#if NET35
-        [Ignore("Random")]
-#endif
         public void custom_feature_test_lbp()
         {
             #region doc_feature_lbp
@@ -700,9 +685,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void custom_data_type_test()
         {
             #region doc_datatype
@@ -782,9 +764,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void freak_binary_split()
         {
             #region doc_feature_freak
@@ -865,9 +844,6 @@ namespace Accord.Tests.Imaging
 
         [Test]
         [Category("Random")]
-#if NET35
-        [Ignore("Random behaviour differs in net35.")]
-#endif
         public void learn_from_disk()
         {
             string basePath = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "SURF");

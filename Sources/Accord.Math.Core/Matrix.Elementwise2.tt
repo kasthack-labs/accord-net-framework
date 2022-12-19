@@ -122,9 +122,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The scalar <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#> b)
         {
             return <#=name#>(a, b, new <#=r#>[a.GetLength(0), a.GetLength(1)]);
@@ -137,9 +135,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The scalar <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#> b)
         {
             return <#=name#>(a, b, JaggedCreateAs<<#=a#>, <#=r#>>(a));
@@ -164,9 +160,7 @@ namespace Accord.Math
         /// <param name="a">The vector <c>a</c>.</param>
         /// <param name="b">The vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=name#>(this <#=a#>[] a, <#=b#>[] b)
         {
             return <#=name#>(a, b, new <#=r#>[a.Length]);
@@ -179,9 +173,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#>[][] b)
         {
             return <#=name#>(a, b, JaggedCreateAs<<#=a#>, <#=r#>>(a));
@@ -194,9 +186,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#>[,] b)
         {
             return <#=name#>(a, b, MatrixCreateAs<<#=a#>, <#=r#>>(a));
@@ -209,9 +199,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#> a, <#=b#>[,] b)
         {
             return <#=name#>(a, b, MatrixCreateAs<<#=b#>, <#=r#>>(b));
@@ -224,9 +212,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#> a, <#=b#>[][] b)
         {
             return <#=name#>(a, b, JaggedCreateAs<<#=b#>, <#=r#>>(b));
@@ -239,9 +225,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The vector <c>b</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=name#>(this <#=a#> a, <#=b#>[] b)
         {
             return <#=name#>(a, b, new <#=r#>[b.Length]);
@@ -262,9 +246,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The vector <c>b</c>.</param>
 <#=dim_doc#>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#>[] b, VectorType dimension)
         {
             return <#=name#>(a, b, dimension, MatrixCreateAs<<#=a#>, <#=r#>>(a));
@@ -277,9 +259,7 @@ namespace Accord.Math
         /// <param name="a">The matrix <c>A</c>.</param>
         /// <param name="b">The vector <c>b</c>.</param>
 <#=dim_doc#>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#>[] b, VectorType dimension)
         {
             return <#=name#>(a, b, dimension, JaggedCreateAs<<#=a#>, <#=r#>>(a));
@@ -292,9 +272,7 @@ namespace Accord.Math
         /// <param name="a">The vector <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
 <#=dim_doc#>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[] a, <#=b#>[,] b, VectorType dimension)
         {
             return <#=name#>(a, b, dimension, MatrixCreateAs<<#=b#>, <#=r#>>(b));
@@ -307,9 +285,7 @@ namespace Accord.Math
         /// <param name="a">The vector <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
 <#=dim_doc#>
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[] a, <#=b#>[][] b, VectorType dimension)
         {
             return <#=name#>(a, b, dimension, JaggedCreateAs<<#=b#>, <#=r#>>(b));
@@ -370,9 +346,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=b#>[,] <#=name#><#=Com#>Diagonal(this <#=a#> a, <#=b#>[,] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, b.MemberwiseClone());
@@ -385,9 +359,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=b#>[][] <#=name#><#=Com#>Diagonal(this <#=a#> a, <#=b#>[][] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, b.MemberwiseClone());
@@ -400,9 +372,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=b#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[] a, <#=b#>[,] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, b.MemberwiseClone());
@@ -415,9 +385,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=b#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[] a, <#=b#>[][] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, b.MemberwiseClone());
@@ -430,9 +398,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=a#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[,] a, <#=b#> b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, a.MemberwiseClone());
@@ -445,9 +411,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=a#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[][] a, <#=b#> b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, a.MemberwiseClone());
@@ -460,9 +424,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=a#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[,] a, <#=b#>[] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, a.MemberwiseClone());
@@ -475,9 +437,7 @@ namespace Accord.Math
         /// <param name="a">The scalar <c>a</c>.</param>
         /// <param name="b">The matrix <c>B</c>.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=a#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[][] a, <#=b#>[] b)
         {
             return <#=name#><#=Com#>Diagonal(a, b, a.MemberwiseClone());
@@ -525,9 +485,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#>[][] b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -547,9 +505,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#>[,] b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -607,9 +563,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#> b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -628,9 +582,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#> a, <#=b#>[][] b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -649,9 +601,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#> a, <#=b#>[,] b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -679,9 +629,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#> b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -735,9 +683,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=name#>(this <#=a#>[] a, <#=b#>[] b, <#=r#>[] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -763,9 +709,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=name#>(this <#=a#>[] a, <#=b#> b, <#=r#>[] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -783,9 +727,7 @@ namespace Accord.Math
         /// <param name="result">The vector where the result should be stored. Pass the same
         ///   vector as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[] <#=name#>(this <#=a#> a, <#=b#>[] b, <#=r#>[] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -856,9 +798,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[] a, <#=b#>[,] b, VectorType dimension, <#=r#>[,] result)
         {
             return <#=name#>(b, a, dimension, result);
@@ -874,9 +814,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[] a, <#=b#>[][] b, VectorType dimension, <#=r#>[][] result)
         {
             return <#=name#>(b, a, dimension, result);
@@ -892,9 +830,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#>(this <#=a#>[,] a, <#=b#>[] b, VectorType dimension, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(d: dimension, a: a, b: b, result: result);
@@ -927,9 +863,7 @@ namespace Accord.Math
         /// <param name="result">The matrix where the result should be stored. Pass the same
         ///   matrix as one of the arguments to perform the operation in place.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#>(this <#=a#>[][] a, <#=b#>[] b, VectorType dimension, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(d: dimension, a: a, b: b, result: result);
@@ -960,9 +894,7 @@ namespace Accord.Math
 
 
         #region Diagonal
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#><#=Com#>Diagonal(this <#=a#> a, <#=b#>[,] b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -983,9 +915,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#><#=Com#>Diagonal(this <#=a#> a, <#=b#>[][] b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -994,9 +924,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[] a, <#=b#>[,] b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -1017,9 +945,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[] a, <#=b#>[][] b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -1028,9 +954,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[,] a, <#=b#> b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -1051,9 +975,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[][] a, <#=b#> b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -1062,9 +984,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[,] <#=name#><#=Com#>Diagonal(this <#=a#>[,] a, <#=b#>[] b, <#=r#>[,] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);
@@ -1085,9 +1005,7 @@ namespace Accord.Math
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static <#=r#>[][] <#=name#><#=Com#>Diagonal(this <#=a#>[][] a, <#=b#>[] b, <#=r#>[][] result)
         {
             check<<#=a#>, <#=b#>, <#=r#>>(a: a, b: b, result: result);

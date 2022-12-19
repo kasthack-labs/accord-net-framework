@@ -125,9 +125,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         : BaseSupportVectorCalibration<TModel, TKernel, TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         private double threshold = 1e-12;
 

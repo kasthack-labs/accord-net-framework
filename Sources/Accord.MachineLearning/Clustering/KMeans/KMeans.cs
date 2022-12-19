@@ -156,9 +156,6 @@ namespace Accord.MachineLearning
     /// <seealso cref="GaussianMixtureModel"/>
     ///
     [Serializable]
-#if !NETSTANDARD1_4
-    [SerializationBinder(typeof(KMeans.KMeansBinder))]
-#endif
     public class KMeans : ParallelLearningBase,
         IUnsupervisedLearning<KMeansClusterCollection, double[], int>
     {
@@ -647,7 +644,6 @@ namespace Accord.MachineLearning
 
 
 #region Serialization backwards compatibility
-#if !NETSTANDARD1_4
         internal class KMeansBinder : SerializationBinder
         {
             public override Type BindToType(string assemblyName, string typeName)
@@ -736,7 +732,6 @@ namespace Accord.MachineLearning
 
 #pragma warning restore 0169
 #pragma warning restore 0649
-#endif
 #endregion
 
 

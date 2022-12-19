@@ -37,9 +37,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupervisedLearning<TModel, TInput, double>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>, ISupportVectorMachine<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         [NonSerialized]
         CancellationToken token = new CancellationToken();

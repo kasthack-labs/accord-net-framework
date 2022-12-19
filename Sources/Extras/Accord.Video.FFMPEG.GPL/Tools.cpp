@@ -2,7 +2,7 @@
 // The Accord.NET Framework
 // http://accord-framework.net
 //
-// Copyright © César Souza, 2009-2017
+// Copyright ï¿½ Cï¿½sar Souza, 2009-2017
 // cesarsouza at gmail.com
 //
 //    This program is free software; you can redistribute it and/or modify
@@ -178,26 +178,6 @@ namespace Accord {
 
                 if (checked)
                     return;
-#if NET35
-                bool is64bits = Accord::Compat::EnvironmentEx::Is64BitProcess;
-                DirectoryInfo^ windowPath = Directory::GetParent(Environment::GetFolderPath(Environment::SpecialFolder::System));
-
-                if (is64bits)
-                {
-                    throw gcnew InvalidOperationException("This application cannot be run in 64-bits.");
-                }
-                else
-                {
-                    bool success = windowPath->GetDirectories("WinSxS\\x86_Microsoft.VC90.CRT*")->Length > 0;
-
-                    if (!success)
-                    {
-                        throw gcnew InvalidOperationException("This application requires the x86 version of " +
-                            "the Microsoft Visual C++ 2008 SP1 Redistributable Package to be installed on this computer. Please " +
-                            "download and install it from https://www.microsoft.com/en-us/download/details.aspx?id=5582");
-                    }
-                }
-#else
                 String^ system32Path = Environment::GetFolderPath(Environment::SpecialFolder::SystemX86);
                 String^ system64Path = Environment::GetFolderPath(Environment::SpecialFolder::System);
                 bool is64bits = Environment::Is64BitProcess;
@@ -226,7 +206,6 @@ namespace Accord {
                             "download and install it from https://www.microsoft.com/en-us/download/details.aspx?id=48145");
                     }
                 }
-#endif
 
                 checked = true;
             }

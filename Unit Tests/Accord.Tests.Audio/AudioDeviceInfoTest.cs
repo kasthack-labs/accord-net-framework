@@ -38,15 +38,7 @@ namespace Accord.Tests.Audio
         [Test]
         public void sharpdx_version_test()
         {
-#if NET35
-            Type type = typeof(SharpDX.Bool);
-            Assembly asm = type.Assembly;
-            Assert.AreEqual("v2.0.50727", asm.ImageRuntimeVersion);
-#elif NET40
-            Type type = typeof(SharpDX.DirectSound.CaptureBufferCapabilities);
-            Assembly asm = type.Assembly;
-            Assert.AreEqual("v4.0.30319", asm.ImageRuntimeVersion);
-#elif NETCORE
+#if NETCORE
             Type type = typeof(SharpDX.DirectSound.CaptureBufferCapabilities);
             Assembly asm = type.GetTypeInfo().Assembly;
             var targetFramework = (System.Runtime.Versioning.TargetFrameworkAttribute)asm

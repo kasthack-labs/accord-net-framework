@@ -2,7 +2,7 @@
 // The Accord.NET Framework
 // http://accord-framework.net
 //
-// Copyright © César Souza, 2009-2017
+// Copyright ï¿½ Cï¿½sar Souza, 2009-2017
 // cesarsouza at gmail.com
 //
 //    This library is free software; you can redistribute it and/or
@@ -122,9 +122,7 @@ namespace Accord.MachineLearning.VectorMachines
         IDisposable
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private MultilabelProbabilityMethod method = MultilabelProbabilityMethod.PerClass;
@@ -584,11 +582,10 @@ namespace Accord.MachineLearning.VectorMachines
                 // The cache has not been created
                 cache.Products = new double[vectorCount];
 
-#if !NET35      // Create synchronization objects
+               // Create synchronization objects
                 cache.SyncObjects = new SpinLock[vectorCount];
                 for (int i = 0; i < cache.SyncObjects.Length; i++)
                     cache.SyncObjects[i] = new SpinLock();
-#endif
             }
 
             // Initialize (or reset) the cache. A value of Not-a-Number
@@ -707,9 +704,7 @@ namespace Accord.MachineLearning.VectorMachines
             public int Evaluations;
             public double[] Products;
             public int[][] Vectors;
-#if !NET35
             public SpinLock[] SyncObjects;
-#endif
         }
         #endregion
 

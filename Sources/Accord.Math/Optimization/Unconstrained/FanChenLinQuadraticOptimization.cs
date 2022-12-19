@@ -898,9 +898,7 @@ namespace Accord.Math.Optimization
             return false;
         }
 
-#if !NET35 && !NET40
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         void swap_index(int i, int j)
         {
             swap(indices, i, j);
@@ -913,9 +911,7 @@ namespace Accord.Math.Optimization
             swap(G_bar, i, j);
         }
 
-#if !NET35 && !NET40
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         static void swap<T>(T[] array, int i, int j)
         {
             T t = array[i];

@@ -248,9 +248,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
     public class ProbabilisticOutputCalibration<TKernel, TInput>
         : ProbabilisticOutputCalibrationBase<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         ///   Initializes a new instance of Platt's Probabilistic Output Calibration algorithm.
@@ -281,9 +279,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         ISupportVectorMachineLearning<TInput>
         where TKernel : IKernel<TInput>
         where TModel : SupportVectorMachine<TKernel, TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
 
         private double[] distances;

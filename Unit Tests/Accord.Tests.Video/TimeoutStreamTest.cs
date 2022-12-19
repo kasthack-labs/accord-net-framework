@@ -24,7 +24,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if !NET35 && !NET40
 namespace Accord.Tests.Video
 {
     using System;
@@ -104,4 +103,3 @@ namespace Accord.Tests.Video
         }
     }
 }
-#endif

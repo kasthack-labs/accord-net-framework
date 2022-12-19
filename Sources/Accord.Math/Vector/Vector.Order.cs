@@ -180,9 +180,7 @@ namespace Accord.Math
         /// 
         public static TList Shuffled<TList, T>(this TList array)
             where TList :
-#if !NETSTANDARD1_4
             ICloneable,
-#endif
             IList<T>
         {
             var clone = (TList)array.Clone();

@@ -395,15 +395,9 @@ namespace Accord.Video
                 {
                     // Start capturing a new frame at the same
                     // time we send the previous one to listeners
-#if !NET35
                     Task.WaitAll(
-#if NET40
-                        Task.Factory.StartNew(() =>
-#else
                         Task.Run(() =>
-#endif
                         {
-#endif
                             // wait for a while ?
                             if (frameInterval > 0)
                             {
@@ -435,16 +429,10 @@ namespace Accord.Video
                             // increment frames counter
                             captureContext.args.FrameIndex = counter++;
                             framesReceived++;
-#if !NET35
                         }
                     ),
-#if NET40
-                        Task.Factory.StartNew(() =>
-#else
                         Task.Run(() =>
-#endif
                         {
-#endif
                             // provide new image to clients
                             if (displayContext != null)
                             {
@@ -454,9 +442,7 @@ namespace Accord.Video
                                 if (NewFrame != null)
                                     NewFrame(this, displayContext.args);
                             }
-#if !NET35
                         }));
-#endif
 
                     // Update buffer position
                     displayContext = buffer[bufferPos];
@@ -470,12 +456,10 @@ namespace Accord.Video
                 }
                 catch (Exception exception)
                 {
-#if !NET35
                     AggregateException ae = exception as AggregateException;
 
                     if (ae != null && ae.InnerExceptions.Count == 1)
                         exception = ae.InnerExceptions[0];
-#endif
                     // provide information to clients
                     if (VideoSourceError == null)
                         throw;

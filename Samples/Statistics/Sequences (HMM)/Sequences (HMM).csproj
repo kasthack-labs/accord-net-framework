@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sequences.HMMs</RootNamespace>
     <AssemblyName>Sequences %28HMM%29</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <StartupObject>Sequences.HMMs.Program</StartupObject>
     <FileUpgradeFlags>

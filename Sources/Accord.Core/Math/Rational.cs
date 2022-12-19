@@ -2,7 +2,7 @@
 // The Accord.NET Framework
 // http://accord-framework.net
 //
-// Copyright © César Souza, 2009-2017
+// Copyright ï¿½ Cï¿½sar Souza, 2009-2017
 // cesarsouza at gmail.com
 //
 //    This library is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 //
-// Copyright © AJ Richardson, 2015
+// Copyright ï¿½ AJ Richardson, 2015
 // https://github.com/aj-r/MathExtension
 //
 //    The MIT License(MIT)
@@ -52,20 +52,13 @@ namespace Accord.Math
     using System.ComponentModel;
     using System.Globalization;
     using Accord.Compat;
-#if NETSTANDARD1_4
-    using SMath = Accord.Compat.SMath;
-#else
     using SMath = System.Math;
-#endif
 
     /// <summary>
     ///   Rational number.
     /// </summary>
     /// 
     [Serializable]
-#if !NETSTANDARD1_4
-    [TypeConverter(typeof(Accord.Math.Converters.RationalConverter))]
-#endif
     public struct Rational : IComparable, IComparable<Rational>, IEquatable<Rational>, IFormattable
     {
         private const double DEFAULT_TOLERANCE = 1e-6;
@@ -235,11 +228,7 @@ namespace Accord.Math
 
         private static bool TryParse(string s, NumberStyles style, IFormatProvider provider, bool throwOnFailure, out Rational result)
         {
-#if NET35
-            if (StringEx.IsNullOrWhiteSpace(s))
-#else
             if (string.IsNullOrWhiteSpace(s))
-#endif
                 return ParseFailure(throwOnFailure, out result);
             var parts = s.Split('/');
             if (parts.Length > 2)

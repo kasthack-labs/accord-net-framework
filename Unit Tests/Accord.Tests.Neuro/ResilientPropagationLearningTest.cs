@@ -35,7 +35,6 @@ namespace Accord.Tests.Neuro
     {
 
 
-#if !NET35
         [Test]
         public void RunEpochTest1()
         {
@@ -148,8 +147,5 @@ namespace Accord.Tests.Neuro
                 Assert.AreEqual(expected, actual, 0.01);
             }
         }
-#endif
-
-
     }
 }

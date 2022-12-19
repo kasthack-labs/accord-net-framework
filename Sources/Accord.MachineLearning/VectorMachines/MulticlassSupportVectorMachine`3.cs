@@ -452,17 +452,13 @@ namespace Accord.MachineLearning.VectorMachines
 
 
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByVoting(TInput input, Cache cache)
         {
             return DistanceByVoting(input, new double[NumberOfOutputs], cache).ArgMax();
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -479,9 +475,7 @@ namespace Accord.MachineLearning.VectorMachines
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private int DecideByElimination(TInput input, Decision[] path, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -506,9 +500,7 @@ namespace Accord.MachineLearning.VectorMachines
             return i;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -543,9 +535,7 @@ namespace Accord.MachineLearning.VectorMachines
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByElimination(TInput input, double[] result, Decision[] path, Cache cache)
         {
             int i = NumberOfOutputs - 1;
@@ -583,9 +573,7 @@ namespace Accord.MachineLearning.VectorMachines
             return result;
         }
 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         private double[] DistanceByVoting(TInput input, double[] result, Cache cache)
         {
             Parallel.For(0, Indices.Length, ParallelOptions, k =>

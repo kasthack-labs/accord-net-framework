@@ -5,11 +5,11 @@
   <PropertyGroup>
     <RootNamespace>Accord.Tests.Imaging</RootNamespace>
     <AssemblyName>Accord.Tests.Imaging</AssemblyName>
-    <TargetFrameworks>netcoreapp3.1;net47</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+    <When Condition="'$(TargetFramework)' == 'net6.0'">
       <ItemGroup>
         <Compile Update="Properties\Resources.Designer.cs">
           <DependentUpon>Resources.resx</DependentUpon>

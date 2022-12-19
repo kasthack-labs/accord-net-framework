@@ -13,13 +13,7 @@
 
 extern "C"
 {
-#if NET35
-#define snprintf(buf,len, format,...) _snprintf_s(buf, len,len, format, __VA_ARGS__)
-#endif
 #include <libavutil/timestamp.h>
-#if NET35
-#undef snprintf
-#endif
 
 #include <libavutil/opt.h>
 #include <libavutil/mathematics.h>

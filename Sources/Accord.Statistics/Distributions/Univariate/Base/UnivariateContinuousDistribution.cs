@@ -738,9 +738,7 @@ namespace Accord.Statistics.Distributions.Univariate
         ///   value when applied in the <see cref="DistributionFunction(double)"/>.</returns>
         /// 
         public double InverseDistributionFunction(
-#if !NET35
-[RangeAttribute(0, 1)]
-#endif 
+            [RangeAttribute(0, 1)]
             double p)
         {
             if (p < 0.0 || p > 1.0)

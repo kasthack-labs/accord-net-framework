@@ -260,11 +260,7 @@ namespace Accord.Statistics.Filters
             /// 
             public bool IsMissingValue(object value)
             {
-#if !NETSTANDARD1_4
                 return this.HasMissingValue && (value is DBNull || value == null || Object.Equals(this.MissingValue, value));
-#else
-                return this.HasMissingValue && (value == null || Object.Equals(this.MissingValue, value));
-#endif
             }
 
             /// <summary>
@@ -292,9 +288,7 @@ namespace Accord.Statistics.Filters
             {
                 if (hasMissingValue && input.IsEqual(missingValue))
                     return -1;
-#if !NETSTANDARD1_4
                 Check();
-#endif
                 return Mapping[input];
             }
 
@@ -329,7 +323,6 @@ namespace Accord.Statistics.Filters
                 return result;
             }
 
-#if !NETSTANDARD1_4
             /// <summary>
             /// Applies the transformation to an input, producing an associated output.
             /// </summary>
@@ -375,7 +368,6 @@ namespace Accord.Statistics.Filters
                     result[i] = Transform(input[i]);
                 return result;
             }
-#endif
 
             /// <summary>
             /// Reverts the transformation to a set of output vectors,
@@ -450,7 +442,6 @@ namespace Accord.Statistics.Filters
                 });
             }
 
-#if !NETSTANDARD1_4
             /// <summary>
             /// Learns a model that can map the given inputs to the desired outputs.
             /// </summary>
@@ -495,7 +486,6 @@ namespace Accord.Statistics.Filters
                     return unique;
                 });
             }
-#endif
             private Options learn<TObject>(double[] weights, Func<TObject[]> uniqueFunction)
             {
                 if (weights != null)
@@ -520,11 +510,7 @@ namespace Accord.Statistics.Filters
 
             private void TryAddValue(object value)
             {
-#if NETSTANDARD1_4
-                if (value == null)
-#else
                 if (value == null || value is DBNull)
-#endif
                 {
                     if (!hasMissingValue)
                     {

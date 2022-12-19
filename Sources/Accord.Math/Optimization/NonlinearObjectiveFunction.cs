@@ -163,7 +163,6 @@ namespace Accord.Math.Optimization
             this.Gradient = gradient;
         }
 
-#if !NET35
         /// <summary>
         ///   Creates a new objective function specified through a lambda expression.
         /// </summary>
@@ -196,7 +195,6 @@ namespace Accord.Math.Optimization
             this.Function = func.Compile();
             this.Gradient = grad.Compile();
         }
-#endif
 
 
 

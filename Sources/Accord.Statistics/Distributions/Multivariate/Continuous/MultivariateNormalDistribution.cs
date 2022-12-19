@@ -458,9 +458,7 @@ namespace Accord.Statistics.Distributions.Multivariate
         /// 
         /// <returns>The Mahalanobis distance between the point and this distribution.</returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Mahalanobis(double[] x)
         {
             if (x.Length != Dimension)

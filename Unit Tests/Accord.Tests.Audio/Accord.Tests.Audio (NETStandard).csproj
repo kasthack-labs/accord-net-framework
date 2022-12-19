@@ -3,13 +3,13 @@
   <PropertyGroup>
     <RootNamespace>Accord.Tests.Audio</RootNamespace>
     <AssemblyName>Accord.Tests.Audio</AssemblyName>
-    <TargetFrameworks>netcoreapp3.1;net47</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <Import Project="$(SolutionDir)../Unit Tests/Accord.Tests (NETStandard).targets" />
 
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp3.1' OR '$(TargetFramework)' == 'netcoreapp1.1'">
+    <When Condition="'$(TargetFramework)' == 'net6.0'">
       <ItemGroup>
         <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
       </ItemGroup>
@@ -64,13 +64,13 @@
     <PackageReference Update="NUnit3TestAdapter" Version="3.17.0" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'net47'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
     <PackageReference Include="System.Resources.Extensions">
       <Version>4.7.1</Version>
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="System.Resources.Extensions">
       <Version>4.7.1</Version>
     </PackageReference>

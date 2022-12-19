@@ -93,14 +93,8 @@ namespace Accord.Tests.Imaging
 
 
             result = Accord.Imaging.Image.Clone(result);
-
-#if NET35
-            // result.Save(@"C:\Projects\Accord.NET\framework\Unit Tests\Accord.Tests.Imaging\Resources\blend_net35.png", ImageFormat.Png);
-            Bitmap image = Accord.Imaging.Image.Clone(Resources.blend_net35);
-#else
             // result.Save(@"C:\Projects\Accord.NET\framework\Unit Tests\Accord.Tests.Imaging\Resources\blend_net45.png", ImageFormat.Png);
             Bitmap image = Accord.Imaging.Image.Clone(Resources.blend_net45);
-#endif
 
             double[,] expected; new ImageToMatrix().Convert(image, out expected);
             double[,] actual; new ImageToMatrix().Convert(result, out actual);

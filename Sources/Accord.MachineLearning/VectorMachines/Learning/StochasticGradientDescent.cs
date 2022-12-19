@@ -175,9 +175,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseStochasticGradientDescent<SupportVectorMachine<TKernel, TInput>, TKernel, TInput, TLoss>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
         /// <summary>
@@ -226,9 +224,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
         where TLoss : struct, IDifferentiableLoss<bool, double, double>
     {
 

@@ -2,7 +2,7 @@
 // AForge.NET framework
 // http://www.aforgenet.com/framework/
 //
-// Copyright © AForge.NET, 2005-2011
+// Copyright ï¿½ AForge.NET, 2005-2011
 // contacts@aforgenet.com
 //
 
@@ -566,11 +566,7 @@ namespace Accord.Imaging
 
             if (!File.Exists(downloadedFileName))
             {
-#if NET35
-                if (localPath == null || String.IsNullOrEmpty(localPath.Trim()))
-#else
                 if (!String.IsNullOrWhiteSpace(localPath))
-#endif
                     Directory.CreateDirectory(localPath);
 
                 Console.WriteLine("Downloading {0}", url);

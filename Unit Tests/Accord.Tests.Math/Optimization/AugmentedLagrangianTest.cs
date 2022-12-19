@@ -141,7 +141,6 @@ namespace Accord.Tests.Math
             Assert.IsFalse(Double.IsNaN(solver.Solution[1]));
         }
 
-#if !NET35
         [Test]
         public void AugmentedLagrangianSolverConstructorTest3()
         {
@@ -590,9 +589,6 @@ namespace Accord.Tests.Math
             Assert.AreEqual(2.77, solver.Solution[0], 1e-2);
             Assert.AreEqual(4.16, solver.Solution[1], 1e-2);
         }
-
-#endif
-
 
         [Test]
         public void ConstructorTest2()

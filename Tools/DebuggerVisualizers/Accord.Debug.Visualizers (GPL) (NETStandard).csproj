@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Accord.Debug.Visualizers</AssemblyName>
     <RootNamespace>Accord.DebuggerVisualizers.GPL</RootNamespace>
-    <TargetFrameworks><!--net462--></TargetFrameworks>
+    <TargetFrameworks><!--net48--></TargetFrameworks>
     <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 

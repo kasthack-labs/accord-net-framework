@@ -20,7 +20,6 @@
 //    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 //
 
-#if NET35 || NETSTANDARD1_4
 namespace Accord.Compat
 {
     using Accord;
@@ -138,4 +137,3 @@ namespace Accord.Compat
         public CancellationToken CancellationToken { get; set; }
     }
 }
-#endif

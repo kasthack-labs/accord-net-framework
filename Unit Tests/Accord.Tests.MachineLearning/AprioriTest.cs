@@ -27,12 +27,8 @@ namespace Accord.Tests.MachineLearning
     using Accord.Math;
     using Accord.MachineLearning.Rules;
 
-#if !NET35
     using System;
     using System.Collections.Generic;
-#else
-    using Accord.Compat;
-#endif
 
 
     [TestFixture]

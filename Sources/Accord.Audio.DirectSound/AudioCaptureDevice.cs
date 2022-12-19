@@ -468,11 +468,9 @@ namespace Accord.DirectSound
                 if (captureDevice != null)
                     captureDevice.Dispose();
 
-#if !NETSTANDARD1_4
                 for (int i = 0; i < notifications.Length; i++)
                     if (notifications[i].WaitHandle != null)
                         notifications[i].WaitHandle.Close();
-#endif
             }
         }
 
