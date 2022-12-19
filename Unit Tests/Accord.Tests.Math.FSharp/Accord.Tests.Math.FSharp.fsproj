@@ -10,7 +10,7 @@
     <RootNamespace>Accord.Tests.Math.FSharp</RootNamespace>
     <AssemblyName>Accord.Tests.Math.FSharp</AssemblyName>
     <Name>Accord.Tests.Math.FSharp</Name>
-	<OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+    <OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
     <TargetFrameworkProfile />
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -49,7 +49,8 @@
     <Compile Include="CobylaTest.fs" />
     <Compile Include="AssemblyInfo.fs" />
     <None Include="Accord.snk" />
-    <Content Include="packages.config" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Sources\Accord.Statistics\Accord.Statistics.csproj">
@@ -60,9 +61,6 @@
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\Externals\NUnit\NUnit.Framework-3.6.1\bin\net-4.5\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
