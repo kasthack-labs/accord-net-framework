@@ -483,6 +483,17 @@ namespace Accord.MachineLearning.DecisionTrees
             return DecisionSet.FromDecisionTree(this);
         }
 
+        /// <summary>
+        ///   Creates an <see cref="Expression">Expression Tree</see> representation
+        ///   of this decision tree, which can in turn be compiled into code.
+        /// </summary>
+        /// 
+        /// <returns>A tree in the form of an expression tree.</returns>
+        /// 
+        public Expression<Func<double[], int>> ToExpression()
+        {
+            return new DecisionTreeExpressionCreator(this).Create();
+        }
 #if !(NETSTANDARD2_0 || NETSTANDARD2_1)
         /// <summary>
         ///   Creates a .NET assembly (.dll) containing a static class of
