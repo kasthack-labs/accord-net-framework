@@ -525,7 +525,6 @@ namespace Accord.MachineLearning.DecisionTrees
             da.Save(assemblyName);
         }
 #endif
-#endif
 
 
 
