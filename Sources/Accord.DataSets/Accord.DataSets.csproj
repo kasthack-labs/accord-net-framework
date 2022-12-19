@@ -76,7 +76,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Accord.snk" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="Properties\CustomDictionary.xml" />

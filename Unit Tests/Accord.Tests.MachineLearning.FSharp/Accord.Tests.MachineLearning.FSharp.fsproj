@@ -10,33 +10,34 @@
     <RootNamespace>Accord.Tests.MachineLearning.FSharp</RootNamespace>
     <AssemblyName>Accord.Tests.MachineLearning.FSharp</AssemblyName>
     <Name>Accord.Tests.MachineLearning.FSharp</Name>
-	<OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
+    <OutputPath>bin\$(Configuration)\$(Platform)</OutputPath>
     <TargetFrameworkProfile />
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>5.0.2</TargetFSharpCoreVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'net48|AnyCPU' ">
     <DefineConstants>TRACE;NET48</DefineConstants>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>5.0.2</TargetFSharpCoreVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'mono|AnyCPU' ">
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>5.0.2</TargetFSharpCoreVersion>
     <DefineConstants>TRACE;NET48</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'mono|AnyCPU' ">
     <DefineConstants>TRACE;MONO</DefineConstants>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.4.1.0</TargetFSharpCoreVersion>
+    <TargetFSharpCoreVersion>5.0.2</TargetFSharpCoreVersion>
   </PropertyGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">14</MinimumVisualStudioVersion>
