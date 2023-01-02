@@ -224,7 +224,7 @@ namespace Accord.DataSets
             }
             else
             {
-                bmp = Accord.Imaging.Image.FromUrl("https://homepages.cae.wisc.edu/~ece533/images/" + name, path);
+                bmp = Accord.Imaging.Image.FromUrl("https://raw.githubusercontent.com/kasthack-labs/accord-net-samples/master/sample-images/" + name, path);
             }
             
 
