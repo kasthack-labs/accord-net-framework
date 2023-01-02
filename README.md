@@ -1,6 +1,10 @@
 # Accord.NET Framework
 
-This project is currently archived. Please fork the project into your own GitHub account if you would like to continue its development.
+I'm currently(2023-01-03) workign on making this project run on moden runtimes but don't expect it to be supported.
+
+\- kasthack
+
+~~This project is currently archived. Please fork the project into your own GitHub account if you would like to continue its development.~~
 
 # Archiving
 
@@ -60,25 +64,11 @@ The framework comes with a wide range of sample applications to help get you sta
 
 # Building
 
-#### With Visual Studio 2015
+#### With Visual Studio 2022
 
-Please download and install the following dependencies:
-
-- [T4 Toolbox for Visual Studio 2015](https://visualstudiogallery.msdn.microsoft.com/34b6d489-afbc-4d7b-82c3-dded2b726dbc)
-- [Sandcastle Help File Builder (with VS2015 extension)](https://github.com/EWSoftware/SHFB/releases)
-- [NUnit 3 Test Adapter](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.NUnit3TestAdapter)
-
-Then navigate to the Sources directory, and open the *Accord.NET.sln* solution file. Note: the solution includes F# unit test projects that can be disabled/unloaded from the solution in case you do not have support for F# tools in your version of Visual Studio.
-
-
-#### With Visual Studio 2017
-
-Please download and install the following dependencies:
-
-- [T4 Toolbox for Visual Studio 2017](https://github.com/hagronnestad/T4Toolbox/releases/tag/vs2017-b1)
-- [Sandcastle Help File Builder (with VS2017 extension)](https://github.com/EWSoftware/SHFB/releases)
-- [NUnit 3 Test Adapter](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.NUnit3TestAdapter)
-- [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145&751be11f-ede8-5a0c-058c-2ee190a24fa6) (both x64 and x86)
+* [T4 Toolbox](https://github.com/Ch0senOne/T4Toolbox/releases)
+* [Sandcastle Help File Builder(with VS 2022 extension)](https://github.com/EWSoftware/SHFB/releases)
+* [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13255) (Required for some tests)
 
 Then navigate to the Sources directory, and open the *Accord.NET.sln* solution file. Note: the solution includes F# unit test projects that can be disabled/unloaded from the solution in case you do not have support for F# tools in your version of Visual Studio.
 
