@@ -679,7 +679,7 @@ namespace Accord.Tests.MachineLearning
         public void gh1056()
         {
             string basePath = NUnit.Framework.TestContext.CurrentContext.WorkDirectory;
-            string worksheetPath = Path.Combine(basePath, "Resources", "examples.xls");
+            string worksheetPath = Path.Combine(basePath, "Resources", "Accord.Tests.MachineLearning.examples.xls");
             // https://github.com/accord-net/framework/issues/1056
             DataTable table = new ExcelReader(worksheetPath).GetWorksheet("Classification - Yin Yang");
 

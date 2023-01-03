@@ -345,7 +345,7 @@
     <None Include="Resources\ica_data.dat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\examples.xls">
+    <None Include="Resources\Accord.Tests.Statistics.examples.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\hsbdemo.csv">

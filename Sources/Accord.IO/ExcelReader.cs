@@ -198,8 +198,13 @@ namespace Accord.IO
             }
 
             if (IntPtr.Size == 4 && extension == ".xls")
+            {
                 Provider = "Microsoft.Jet.OLEDB.4.0";   // for x86/95-2003
-            else Provider = "Microsoft.ACE.OLEDB.12.0"; // for x64/95-2007+
+            }
+            else
+            {
+                Provider = "Microsoft.ACE.OLEDB.16.0"; // for x64/95-2007+
+            }
 
             var strBuilder = new DbConnectionStringBuilder();
 
@@ -313,7 +318,7 @@ namespace Accord.IO
         public DataTable GetWorksheet(string worksheet)
         {
             DataTable ws;
-
+            
             using (OleDbConnection connection = new OleDbConnection(strConnection))
             {
                 OleDbCommand command = new OleDbCommand("SELECT * FROM [" + worksheet + "$]", connection);

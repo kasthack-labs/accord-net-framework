@@ -736,7 +736,7 @@ namespace Accord.Tests.Statistics
         [Category("Office")]
         public void RevertTest2()
         {
-            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "examples.xls");
+            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Accord.Tests.Statistics.examples.xls");
 
             // Create a new reader, opening a given path
             ExcelReader reader = new ExcelReader(path);
@@ -773,7 +773,7 @@ namespace Accord.Tests.Statistics
         [Category("Office")]
         public void RevertTest2_new_method()
         {
-            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "examples.xls");
+            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Accord.Tests.Statistics.examples.xls");
 
             // Create a new reader, opening a given path
             ExcelReader reader = new ExcelReader(path);
@@ -813,7 +813,7 @@ namespace Accord.Tests.Statistics
         [Category("Office")]
         public void RevertTest3()
         {
-            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "examples.xls");
+            string path = Path.Combine(TestContext.CurrentContext.TestDirectory, "Resources", "Accord.Tests.Statistics.examples.xls");
 
             // Create a new reader, opening a given path
             ExcelReader reader = new ExcelReader(path);

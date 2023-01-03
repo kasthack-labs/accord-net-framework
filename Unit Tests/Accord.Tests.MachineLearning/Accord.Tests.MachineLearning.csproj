@@ -223,7 +223,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Accord.snk" />
-    <None Include="Resources\examples.xls">
+    <None Include="Resources\Accord.Tests.MachineLearning.examples.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Resources\rforest\features.csv">
