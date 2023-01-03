@@ -251,7 +251,6 @@ namespace Accord.Tests.MachineLearning
                 Assert.AreEqual(expected, actual);
             }
 
-#if !NET35
             #region doc_nursery_native
             // Finally, we can also convert our tree to a native
             // function, improving efficiency considerably, with
@@ -272,7 +271,6 @@ namespace Accord.Tests.MachineLearning
 
                 Assert.AreEqual(expected, actual);
             }
-#endif
         }
 
 

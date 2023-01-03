@@ -45,19 +45,8 @@ namespace Accord.Statistics.Filters
         ///   options from being added by throwing an exception.
         /// </summary>
         /// 
-#if !NET35 && !NET40
+
         public event EventHandler<TOptions> AddingNew;
-#else
-        public event ColumnOptionsEventHandler AddingNew;
-
-        /// <summary>
-        ///   Compatibility event args for the <see cref="AddingNew"/> event. This
-        ///   is only required and used for the .NET 3.5 version of the framework.
-        /// </summary>
-        /// 
-        public delegate void ColumnOptionsEventHandler(object sender, TOptions options);
-#endif
-
         /// <summary>
         ///   Extracts the key from the specified column options.
         /// </summary>
@@ -84,6 +73,7 @@ namespace Accord.Statistics.Filters
             return options;
         }
 
+#if !NETSTANDARD2_1
         /// <summary>
         ///   Gets the associated options for the given column name.
         /// </summary>
@@ -97,5 +87,6 @@ namespace Accord.Statistics.Filters
         {
             return base.Dictionary.TryGetValue(columnName, out options);
         }
+#endif
     }
 }

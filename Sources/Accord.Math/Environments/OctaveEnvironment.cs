@@ -574,7 +574,6 @@ namespace Accord.Math.Environments
             }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Initializes a new instance of the <see cref="OctaveEnvironment"/> class.
         /// </summary>
@@ -591,6 +590,5 @@ namespace Accord.Math.Environments
                     field.SetValue(this, new mat(null));
             }
         }
-#endif
     }
 }

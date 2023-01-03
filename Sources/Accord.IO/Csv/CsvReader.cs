@@ -3,12 +3,12 @@
 // http://accord-framework.net
 //
 // LumenWorks.Framework.IO.CSV.CsvReader
-// Copyright (c) 2005 Sébastien Lorion
+// Copyright (c) 2005 Sï¿½bastien Lorion
 //
-// Copyright © César Souza, 2009-2017
+// Copyright ï¿½ Cï¿½sar Souza, 2009-2017
 // cesarsouza at gmail.com
 //
-// This class has been based on the original work by Sébastien Lorion, originally
+// This class has been based on the original work by Sï¿½bastien Lorion, originally
 // published under the MIT license (and thus compatible with the LGPL). Original
 // license text is reproduced below:
 //
@@ -36,10 +36,8 @@ namespace Accord.IO
     using System;
     using System.Collections;
     using System.Collections.Generic;
-#if !NETSTANDARD1_4
     using System.Data.Common;
     using System.Data;
-#endif
     using Debug = System.Diagnostics.Debug;
     using System.Globalization;
     using System.IO;
@@ -52,9 +50,7 @@ namespace Accord.IO
     /// </summary>
     /// 
     public partial class CsvReader :
-#if !NETSTANDARD1_4
         IDataReader,
-#endif
         IEnumerable<string[]>, IDisposable
     {
         /// <summary>
@@ -212,7 +208,7 @@ namespace Accord.IO
 
         private void init(TextReader reader, bool hasHeaders, char delimiter = DefaultDelimiter, int bufferSize = DefaultBufferSize)
         {
-#if DEBUG && !NETSTANDARD1_4
+#if DEBUG
             _allocStack = new System.Diagnostics.StackTrace();
 #endif
 
@@ -489,7 +485,6 @@ namespace Accord.IO
         }
 
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Reads the entire stream into a DataTable.
         /// </summary>
@@ -515,7 +510,6 @@ namespace Accord.IO
         {
             return new DataView(ToTable()).ToTable(false, columnNames);
         }
-#endif
 
         /// <summary>
         ///   Reads the entire stream into a list of records.
@@ -1894,7 +1888,6 @@ namespace Accord.IO
             }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Validates the state of the data reader.
         /// </summary>
@@ -1913,7 +1906,6 @@ namespace Accord.IO
             if ((validations & DataReaderValidations.IsNotClosed) != 0 && _isDisposed)
                 throw new InvalidOperationException(ExceptionMessage.ReaderClosed);
         }
-#endif
 
         /// <summary>
         /// Copy the value of the specified field to an array.
@@ -1991,7 +1983,7 @@ namespace Accord.IO
         }
 
 
-#if DEBUG && !NETSTANDARD1_4
+#if DEBUG
         /// <summary>
         /// Contains the stack when the object was allocated.
         /// </summary>
@@ -2021,9 +2013,7 @@ namespace Accord.IO
         /// <value>
         /// 	<see langword="true"/> if the instance has been disposed of; otherwise, <see langword="false"/>.
         /// </value>
-#if !NETSTANDARD1_4
         [System.ComponentModel.Browsable(false)]
-#endif
         public bool IsDisposed
         {
             get { return _isDisposed; }
@@ -2140,7 +2130,6 @@ namespace Accord.IO
             }
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Releases unmanaged resources and performs other cleanup operations before the instance is reclaimed by garbage collection.
         /// </summary>
@@ -2152,8 +2141,5 @@ namespace Accord.IO
 
             Dispose(false);
         }
-#endif
-
-
     }
 }

@@ -213,12 +213,6 @@ namespace Accord.Neuro.Learning
             double errors = 0;
             
 
-#if NET35
-            var partial = storage.Value.Clear();
-            for (int i = 0; i < input.Length; i++)
-            {
-                int observationIndex = i;
-#else
             Object lockObj = new Object();
 
             // For each training instance
@@ -231,7 +225,6 @@ namespace Accord.Neuro.Learning
 
                 // Map
                 (observationIndex, loopState, partial) =>
-#endif
                 {
                     var observation = input[observationIndex];
 
@@ -312,7 +305,6 @@ namespace Accord.Neuro.Learning
                         partial.ErrorSumOfSquares += e * e;
                     }
 
-#if !NET35
                     return partial; // Report partial solution
                 },
 
@@ -335,16 +327,6 @@ namespace Accord.Neuro.Learning
                         errors += partial.ErrorSumOfSquares;
                     }
                 });
-#else
-                }
-            }
-
-            weightsGradient = partial.WeightGradient;
-            hiddenBiasGradient = partial.HiddenBiasGradient;
-            visibleBiasGradient = partial.VisibleBiasGradient;
-            errors = partial.ErrorSumOfSquares;
-#endif
-
             return errors;
         }
 
@@ -363,12 +345,6 @@ namespace Accord.Neuro.Learning
             double errors = 0;
 
 
-#if NET35
-            var partial = storage.Value.Clear();
-            for (int i = 0; i < input.Length; i++)
-            {
-                int observationIndex = i;
-#else
             Object lockObj = new Object();
 
             // For each training instance
@@ -383,7 +359,6 @@ namespace Accord.Neuro.Learning
 
                 // Map
                 (observationIndex, loopState, partial) =>
-#endif
                 {
                     var observation = input[observationIndex];
 
@@ -425,7 +400,6 @@ namespace Accord.Neuro.Learning
                         partial.ErrorSumOfSquares += e * e;
                     }
 
-#if !NET35
                     return partial; // Report partial solution
                 },
 
@@ -437,16 +411,6 @@ namespace Accord.Neuro.Learning
                         errors += partial.ErrorSumOfSquares;
                     }
                 });
-#else
-                }
-            }
-
-            weightsGradient = partial.WeightGradient;
-            hiddenBiasGradient = partial.HiddenBiasGradient;
-            visibleBiasGradient = partial.VisibleBiasGradient;
-            errors = partial.ErrorSumOfSquares;
-#endif
-
             return errors;
         }
 

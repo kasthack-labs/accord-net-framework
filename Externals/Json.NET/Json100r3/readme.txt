@@ -25,17 +25,8 @@ Versions:
 
 Json.NET has different libraries for the various .NET Framework versions.
 
--net45:
-  .NET 4.5+
-
--net40:
-  .NET 4.0
-
--net35:
-  .NET 3.5
-
--net20:
-  .NET 2.0, Unity
+-net48:
+  .NET 4.8+
 
 -portable-net45+win8+wpa81+wp8:
   .NET 4.5, Windows Phone 8, Windows 8 Store

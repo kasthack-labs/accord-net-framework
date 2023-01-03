@@ -67,7 +67,6 @@ namespace Accord.Math.Optimization
         /// 
         public double Tolerance { get; set; }
 
-#if !NET35
         /// <summary>
         ///   Constructs a new nonlinear constraint.
         /// </summary>
@@ -111,7 +110,6 @@ namespace Accord.Math.Optimization
                 }
             }
         }
-#endif
 
         /// <summary>
         ///   Constructs a new nonlinear constraint.

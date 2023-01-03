@@ -32,9 +32,7 @@ namespace Accord
     /// </summary>
     /// 
     public interface IFeatureExtractor<
-#if !NET35
         out
-#endif
         TPoint, in TInput> : 
         ICovariantTransform<TInput, IEnumerable<TPoint>>, ICloneable, IDisposable
     {

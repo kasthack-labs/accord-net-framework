@@ -41,9 +41,7 @@ namespace Accord.Imaging
     /// <seealso cref="LocalBinaryPattern"/>
     /// 
     public interface IImageFeatureExtractor<
-#if !NET35
         out 
-#endif
         TFeature> :
         IFeatureExtractor<TFeature, Bitmap>,
         IFeatureExtractor<TFeature, UnmanagedImage>, ICloneable, IDisposable
@@ -56,9 +54,7 @@ namespace Accord.Imaging
     /// 
     [Obsolete("This class will be removed.")]
     public interface IFeatureDetector<
-#if !NET35
         out 
-#endif
         TPoint>
     {
         /// <summary>

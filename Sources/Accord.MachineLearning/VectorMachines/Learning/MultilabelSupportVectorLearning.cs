@@ -291,9 +291,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
             SupportVectorMachine<TKernel, TInput>, TKernel,
             MultilabelSupportVectorMachine<TKernel, TInput>>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -340,9 +338,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TBinary : SupportVectorMachine<TKernel, TInput>
         where TModel : OneVsRest<TBinary, TInput>
         where TKernel : IKernel<TInput>
-#if !NETSTANDARD1_4
         where TInput : ICloneable
-#endif
     {
         /// <summary>
         ///   Gets or sets the kernel function to be used to learn the

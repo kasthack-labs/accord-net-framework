@@ -3,12 +3,12 @@
 // http://accord-framework.net
 //
 // LumenWorks.Framework.IO.CSV.CsvReader
-// Copyright (c) 2005 Sébastien Lorion
+// Copyright (c) 2005 Sï¿½bastien Lorion
 //
-// Copyright © César Souza, 2009-2017
+// Copyright ï¿½ Cï¿½sar Souza, 2009-2017
 // cesarsouza at gmail.com
 //
-// This class has been based on the original work by Sébastien Lorion, originally
+// This class has been based on the original work by Sï¿½bastien Lorion, originally
 // published under the MIT license (and thus compatible with the LGPL). Original
 // license text is reproduced below:
 //
@@ -123,7 +123,6 @@ namespace Accord.IO
                 CurrentRecordIndex, CurrentFieldIndex, CurrentPosition, RawData);
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         /// Initializes a new instance of the MalformedCsvException class with serialized data.
         /// </summary>
@@ -139,7 +138,6 @@ namespace Accord.IO
             CurrentRecordIndex = info.GetInt64("CurrentRecordIndex");
             CurrentFieldIndex = info.GetInt32("CurrentFieldIndex");
         }
-#endif
 
         /// <summary>
         ///   Gets the raw data when the error occurred.
@@ -181,7 +179,6 @@ namespace Accord.IO
         /// 
         public override string Message { get { return message; } }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   When overridden in a derived class, sets the <see cref="T:SerializationInfo"/> with information about the exception.
         /// </summary>
@@ -189,9 +186,6 @@ namespace Accord.IO
         /// <param name="info">The <see cref="T:SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The <see cref="T:StreamingContext"/> that contains contextual information about the source or destination.</param>
         /// 
-#if NET35
-        [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.SerializationFormatter)]
-#endif
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);
@@ -203,6 +197,5 @@ namespace Accord.IO
             info.AddValue("CurrentRecordIndex", CurrentRecordIndex);
             info.AddValue("CurrentFieldIndex", CurrentFieldIndex);
         }
-#endif
     }
 }

@@ -54,7 +54,6 @@ namespace Accord.Statistics.Filters
         {
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Applies the sequence of filters to a given table.
         /// </summary>
@@ -73,7 +72,6 @@ namespace Accord.Statistics.Filters
 
             return result;
         }
-#endif
 
     }
 }

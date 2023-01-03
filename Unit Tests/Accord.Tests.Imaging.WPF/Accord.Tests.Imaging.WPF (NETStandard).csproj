@@ -5,11 +5,11 @@
   <PropertyGroup>
     <RootNamespace>Accord.Tests.Imaging</RootNamespace>
     <AssemblyName>Accord.Tests.Imaging.WPF</AssemblyName>
-    <TargetFrameworks>netcoreapp2.0;net47</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <Choose>
-    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+    <When Condition="'$(TargetFramework)' == 'net6.0'">
       <ItemGroup>
         <Compile Remove="Properties\Resources.Designer.cs" />
         <EmbeddedResource Remove="Properties\Resources.resx" />
@@ -31,7 +31,7 @@
     </Otherwise>
   </Choose>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
   </ItemGroup>
 

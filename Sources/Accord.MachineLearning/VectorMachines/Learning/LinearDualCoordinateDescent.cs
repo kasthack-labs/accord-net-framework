@@ -330,9 +330,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         BaseLinearDualCoordinateDescent<SupportVectorMachine<TKernel, TInput>, TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
     {
         /// <summary>
         /// Creates an instance of the model to be learned. Inheritors
@@ -353,9 +351,7 @@ namespace Accord.MachineLearning.VectorMachines.Learning
         where TModel : SupportVectorMachine<TKernel, TInput>
         where TKernel : struct, ILinear<TInput>
         where TInput : IList
-#if !NETSTANDARD1_4
         , ICloneable
-#endif
     {
 
         int max_iter = 1000;

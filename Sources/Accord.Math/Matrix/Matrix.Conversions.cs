@@ -25,9 +25,7 @@ namespace Accord.Math
     using System;
     using System.Collections;
     using System.Collections.Generic;
-#if !NETSTANDARD1_4
     using System.Data;
-#endif
     using System.Globalization;
     using System.Linq;
     using System.Runtime.InteropServices;
@@ -244,18 +242,10 @@ namespace Accord.Math
         /// </example>
         /// 
         public static TOutput[] Convert<TInput, TOutput>(this TInput[] vector,
-#if !NETSTANDARD1_4
             Converter<TInput, TOutput>
-#else
-            Func<TInput, TOutput>
-#endif 
             converter)
         {
-#if !NETSTANDARD1_4
             return Array.ConvertAll(vector, converter);
-#else
-            return vector.Apply(converter);
-#endif
         }
 
         /// <summary>
@@ -272,11 +262,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static TOutput[,] Convert<TInput, TOutput>(this TInput[][] matrix,
-#if !NETSTANDARD1_4
             Converter<TInput, TOutput>
-#else
-            Func<TInput, TOutput>
-#endif 
             converter)
         {
             var result = Matrix.CreateAs<TInput, TOutput>(matrix);
@@ -302,11 +288,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static TOutput[,] Convert<TInput, TOutput>(this TInput[,] matrix,
-#if !NETSTANDARD1_4
             Converter<TInput, TOutput>
-#else
-            Func<TInput, TOutput>
-#endif 
             converter)
         {
             int rows = matrix.GetLength(0);
@@ -395,7 +377,6 @@ namespace Accord.Math
         {
             Type outputElementType = destination.GetInnerMostType();
 
-#if !NETSTANDARD1_4
             if (source.GetType() == destination.GetType() && source.IsMatrix() && destination.IsMatrix())
             {
                 if (outputElementType.IsPrimitive)
@@ -408,7 +389,6 @@ namespace Accord.Math
                 }
             }
             else
-#endif
             {
 
                 bool deep = true;
@@ -612,7 +592,6 @@ namespace Accord.Math
 
 
         #region DataTable Conversions
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Converts a DataTable to a double[,] array.
         /// </summary>
@@ -1361,7 +1340,6 @@ namespace Accord.Math
 
             return m;
         }
-#endif
         #endregion
 
 

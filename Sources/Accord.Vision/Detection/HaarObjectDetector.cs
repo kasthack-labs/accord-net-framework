@@ -292,11 +292,7 @@ namespace Accord.Vision.Detection
 
             this.match = new GroupMatching(0, 0.2);
 
-#if NET35
-            this.parallel = false;
-#else
             this.parallel = true;
-#endif
         }
         #endregion
 
@@ -316,9 +312,7 @@ namespace Accord.Vision.Detection
             get { return parallel; }
             set
             {
-#if !NET35
                 parallel = value;
-#endif
             }
         }
 
@@ -565,7 +559,6 @@ namespace Accord.Vision.Detection
                     }
                 }
 
-#if !NET35
                 else // use parallel processing
                 {
                     // Parallel mode. Scan the integral image searching
@@ -627,7 +620,6 @@ namespace Accord.Vision.Detection
                             detectedObjects.Add(obj);
                     }
                 }
-#endif
             }
 
 

@@ -9,44 +9,12 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="net35|Win32">
-      <Configuration>net35</Configuration>
+    <ProjectConfiguration Include="net48|Win32">
+      <Configuration>net48</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="net35|x64">
-      <Configuration>net35</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net40|Win32">
-      <Configuration>net40</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net40|x64">
-      <Configuration>net40</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net45|Win32">
-      <Configuration>net45</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net45|x64">
-      <Configuration>net45</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net46|Win32">
-      <Configuration>net46</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net46|x64">
-      <Configuration>net46</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net462|Win32">
-      <Configuration>net462</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net462|x64">
-      <Configuration>net462</Configuration>
+    <ProjectConfiguration Include="net48|x64">
+      <Configuration>net48</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -56,7 +24,7 @@
     <ProjectName>Accord.Video.FFMPEG (GPL)</ProjectName>
     <Keyword>ManagedCProj</Keyword>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>true</CLRSupport>
     <PlatformToolset>v141</PlatformToolset>
@@ -68,34 +36,14 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <PlatformToolset>v141</PlatformToolset>
     <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='net35'" Label="Configuration">
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <PlatformToolset>v90</PlatformToolset>
-    <DefineConstants>NET35</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='net40'" Label="Configuration">
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  <PropertyGroup Condition="'$(Configuration)'=='net48'" Label="Configuration">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <PlatformToolset>v141</PlatformToolset>
-    <DefineConstants>NET40</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='net45'" Label="Configuration">
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <PlatformToolset>v141</PlatformToolset>
-    <DefineConstants>NET45</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='net46'" Label="Configuration">
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <PlatformToolset>v141</PlatformToolset>
-    <DefineConstants>NET46</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)'=='net462'" Label="Configuration">
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
-    <PlatformToolset>v141</PlatformToolset>
-    <DefineConstants>NET462</DefineConstants>
+    <DefineConstants>NET48</DefineConstants>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -157,12 +105,12 @@
       <Profile>false</Profile>
     </Link>
   </ItemDefinitionGroup>
-
+<!-- 
   <ItemDefinitionGroup Condition="'$(Configuration)'=='net35'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)..\Externals\msinttypes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-  </ItemDefinitionGroup>
+  </ItemDefinitionGroup> -->
 
   <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
     <Link>

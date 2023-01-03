@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyName>Accord.Math</AssemblyName>
     <RootNamespace>Accord.Math</RootNamespace>
-    <TargetFrameworks>netstandard2.0;netstandard1.4;net47</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <Import Project="$(SolutionDir)Accord.NET (NETStandard).targets" />
@@ -13,28 +13,11 @@
     <ProjectReference Include="..\Accord.Math.Core\Accord.Math.Core (NETStandard).csproj" />
   </ItemGroup>
 
-  <Choose>
-    <When Condition="'$(TargetFramework)' == 'netstandard1.4'">
-      <ItemGroup>
-        <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-        <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0'">
-      <ItemGroup>
-        <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-        <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
-      </ItemGroup>
-    </When>
-    <When Condition="'$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40'">
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="System.IO.Compression" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
-
+  <ItemGroup>
+    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.3.0" />
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
   <ItemGroup>
     <None Update="Decompositions\CholeskyDecomposition.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

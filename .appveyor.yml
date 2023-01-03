@@ -1,22 +1,13 @@
 version: 3.8.2.{build}
 
 image:
-- Visual Studio 2017
+- Visual Studio 2022
 
 configuration:
 - mono
-- net35
-- net40
-- net45
-- net46
-- net462
+- net48
 
 platform: Any CPU
-
-matrix:
-  exclude:
-    - configuration: net35
-      image: Visual Studio 2017
 
 clone_depth: 5
 

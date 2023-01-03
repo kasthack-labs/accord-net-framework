@@ -432,9 +432,7 @@ namespace Accord.Audio.Formats
         /// 
         public void Close()
         {
-#if !NETSTANDARD1_4
             waveStream.Close();
-#endif
         }
 
 

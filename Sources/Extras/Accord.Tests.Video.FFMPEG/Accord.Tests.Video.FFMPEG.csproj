@@ -30,70 +30,27 @@
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'net35' ">
-    <DefineConstants>TRACE;NET35</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'net40' ">
-    <DefineConstants>TRACE;NET40</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'net45' ">
-    <DefineConstants>TRACE;NET45</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'net46' ">
-    <DefineConstants>TRACE;NET46</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'net462|AnyCPU' ">
-    <DefineConstants>TRACE;NET462</DefineConstants>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'net48|AnyCPU' ">
+    <DefineConstants>TRACE;NET48</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'mono' ">
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <DefineConstants>TRACE;MONO</DefineConstants>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
+  <ItemGroup><PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
+  </ItemGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Externals\NUnit\NUnit.Framework-3.6.1\bin\net-4.5\nunit.framework.dll</HintPath>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpDX.DirectSound">
+      <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.DirectSound.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
-  <Choose>
-    <When Condition="'$(Configuration)' == 'net35'">
-      <ItemGroup>
-        <Reference Include="SharpDX">
-          <HintPath>..\..\..\Externals\SharpDX\v263\net20\SharpDX.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="SharpDX.DirectSound">
-          <HintPath>..\..\..\Externals\SharpDX\v263\net20\SharpDX.DirectSound.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-      </ItemGroup>
-    </When>
-    <When Condition="'$(Configuration)' == 'net40'">
-      <ItemGroup>
-        <Reference Include="SharpDX">
-          <HintPath>..\..\..\Externals\SharpDX\v263\net40\SharpDX.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="SharpDX.DirectSound">
-          <HintPath>..\..\..\Externals\SharpDX\v263\net40\SharpDX.DirectSound.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-      </ItemGroup>
-    </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="SharpDX">
-          <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-        <Reference Include="SharpDX.DirectSound">
-          <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.DirectSound.dll</HintPath>
-          <Private>True</Private>
-        </Reference>
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -185,16 +142,6 @@
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
       <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>

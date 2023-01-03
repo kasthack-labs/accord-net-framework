@@ -157,9 +157,7 @@ namespace Accord.Math.Random
         ///   A random vector of observations drawn from this distribution.
         /// </returns>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public double Generate()
         {
             unchecked
@@ -178,9 +176,7 @@ namespace Accord.Math.Random
         ///   Generates a new non-negative integer random number.
         /// </summary>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public uint Next()
         {
             unchecked

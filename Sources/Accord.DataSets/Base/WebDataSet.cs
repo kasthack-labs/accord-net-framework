@@ -186,11 +186,7 @@ namespace Accord.DataSets.Base
 
         private static bool endsWith(string str, string value)
         {
-#if NETSTANDARD1_4
-            return str.EndsWith(value, StringComparison.OrdinalIgnoreCase);
-#else
             return str.EndsWith(value, StringComparison.InvariantCultureIgnoreCase);
-#endif
         }
     }
 }

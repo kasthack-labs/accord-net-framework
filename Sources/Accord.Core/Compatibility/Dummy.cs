@@ -24,39 +24,3 @@ namespace Accord.Compat
 {
     internal class Dummy { }
 }
-
-#if NET35 || NETSTANDARD1_4
-namespace System.Threading
-{
-    internal class Dummy { }
-}
-
-namespace System.Threading.Tasks
-{
-    internal class Dummy { }
-}
-#endif
-
-#if NETSTANDARD1_4
-namespace System.Data
-{
-    internal class Dummy { }
-}
-
-namespace System.Security.Permissions
-{
-    internal static class Dummy { }
-}
-
-
-namespace System.Runtime.Serialization
-{
-    internal static class Dummy { }
-}
-
-namespace System.Runtime.Serialization.Formatters.Binary
-{
-    internal static class Dummy { }
-}
-
-#endif

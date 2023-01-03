@@ -26,6 +26,7 @@ namespace Accord.Collections
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+
     using Accord.Compat;
 
     /// <summary>
@@ -43,7 +44,7 @@ namespace Accord.Collections
     /// <typeparam name="TValue">The type of values in the dictionary.</typeparam>
     /// 
     [Serializable]
-    public abstract class ReadOnlyKeyedCollection<TKey, TValue> 
+    public abstract class ReadOnlyKeyedCollection<TKey, TValue>
         : ReadOnlyCollection<TValue>, IDictionary<TKey, TValue>, IList<TValue>
 #if !MONO && !NET35
         , IReadOnlyCollection<TValue>

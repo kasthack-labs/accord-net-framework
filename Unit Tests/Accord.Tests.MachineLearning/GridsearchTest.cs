@@ -36,10 +36,6 @@ namespace Accord.Tests.MachineLearning
     using Accord.MachineLearning.DecisionTrees.Learning;
     using Accord.MachineLearning.DecisionTrees;
 
-#if NET35
-    using CancellationToken = Accord.Compat.CancellationToken;
-#endif
-
     [TestFixture]
     public class GridsearchTest
     {
@@ -348,7 +344,6 @@ namespace Accord.Tests.MachineLearning
             Assert.AreEqual(1, bestConstant, 1e-8);
         }
 
-#if !NET35
         [Test]
         public void learn_test_strongly_typed()
         {
@@ -439,7 +434,6 @@ namespace Accord.Tests.MachineLearning
             Assert.AreEqual(0, bestTolerance, 1e-8);
             Assert.AreEqual(typeof(Gaussian), bestKernel.GetType());
         }
-#endif
 
         [Test]
         public void cross_validation_test()
@@ -541,8 +535,6 @@ namespace Accord.Tests.MachineLearning
             Assert.AreEqual(10, bestDegree, 1e-8);
             Assert.AreEqual(0, bestConstant, 1e-8);
         }
-
-#if !NET35
         [Test]
         [Category("Slow")]
         public void cross_validation_decision_tree()
@@ -635,7 +627,6 @@ namespace Accord.Tests.MachineLearning
             Assert.AreEqual(0.1076923076923077, bestAverageError, 1e-8);
             Assert.AreEqual(5, bestHeight, 1e-8);
         }
-#endif
 
 
         class Mapper : TransformBase<string, string>

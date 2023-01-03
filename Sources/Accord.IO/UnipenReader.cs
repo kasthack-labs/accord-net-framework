@@ -189,11 +189,7 @@ namespace Accord.IO
                 double y = double.Parse(parts[1]);
 
                 buffer.Add(new[] { x, y });
-#if NET35
-            } while (!StringEx.IsNullOrWhiteSpace(line));
-#else
             } while (!String.IsNullOrWhiteSpace(line));
-#endif
 
             coordinates = buffer.ToArray();
             return true;
@@ -253,9 +249,7 @@ namespace Accord.IO
                 // free managed resources
                 if (reader != null)
                 {
-#if !NETSTANDARD1_4
                     reader.Close();
-#endif
                     reader = null;
                 }
             }

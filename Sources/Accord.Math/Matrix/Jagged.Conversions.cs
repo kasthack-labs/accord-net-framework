@@ -80,11 +80,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static TOutput[][] Convert<TInput, TOutput>(this TInput[,] matrix,
-#if !NETSTANDARD1_4
             Converter<TInput, TOutput> converter
-#else
-            Func<TInput, TOutput> converter
-#endif
             )
         {
             int rows = matrix.Rows();
@@ -112,11 +108,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static TOutput[][] Convert<TInput, TOutput>(this TInput[][] matrix,
-#if !NETSTANDARD1_4
             Converter<TInput, TOutput> converter
-#else
-            Func<TInput, TOutput> converter
-#endif
             )
         {
             int rows = matrix.Rows();

@@ -42,9 +42,7 @@ namespace Accord.Video
         private const int DEFAULT_TIMEOUT_WRITE = 30000;
 
         private Stream _baseStream;
-#if !NET35 && !NET40
         private CancellationTokenSource _source;
-#endif
 
         private int _readTimeout = DEFAULT_TIMEOUT_READ;
         private int _writeTimeout = DEFAULT_TIMEOUT_WRITE;
@@ -56,11 +54,7 @@ namespace Accord.Video
         public TimeoutStream(Stream stream)
         {
             _baseStream = stream;
-#if !NET35 && !NET40
             _source = new CancellationTokenSource();
-#else
-            throw new NotSupportedException();
-#endif
         }
 
         /// <summary>
@@ -181,7 +175,6 @@ namespace Accord.Video
         /// <returns></returns>
         public override int Read(byte[] buffer, int offset, int count)
         {
-#if !NET35 && !NET40
             int result;
 
             if (_baseStream.CanRead && !_baseStream.CanTimeout)
@@ -205,9 +198,6 @@ namespace Accord.Video
             }
 
             return result;
-#else
-            throw new NotSupportedException();
-#endif
         }
 
         /// <summary>
@@ -238,7 +228,6 @@ namespace Accord.Video
         /// <param name="count">Number of bytes to write</param>
         public override void Write(byte[] buffer, int offset, int count)
         {
-#if !NET35 && !NET40
             if (_baseStream.CanWrite && !_baseStream.CanTimeout)
             {
                 try
@@ -257,9 +246,6 @@ namespace Accord.Video
             {
                 _baseStream.Write(buffer, offset, count);
             }
-#else
-            throw new NotSupportedException();
-#endif
         }
     }
 }

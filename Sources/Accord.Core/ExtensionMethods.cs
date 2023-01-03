@@ -48,7 +48,6 @@ namespace Accord
     /// 
     public static class ExtensionMethods
     {
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates and adds multiple <see cref="System.Data.DataColumn"/>
         ///   objects with the given names at once.
@@ -102,7 +101,6 @@ namespace Accord
             foreach (var pair in columns)
                 collection.Add(pair.Key, pair.Value);
         }
-#endif
 
         /// <summary>
         ///   Gets a the value of a <see cref="DescriptionAttribute"/>
@@ -116,11 +114,7 @@ namespace Accord
         /// 
         public static string GetDescription<T>(this T source)
         {
-#if NETSTANDARD1_4
-            FieldInfo fi = source.GetType().GetRuntimeField(source.ToString());
-#else
             FieldInfo fi = source.GetType().GetField(source.ToString());
-#endif
 
             DescriptionAttribute[] attributes =
                 (DescriptionAttribute[])fi.GetCustomAttributes(typeof(DescriptionAttribute), false);
@@ -289,7 +283,7 @@ namespace Accord
         {
             // http://stackoverflow.com/a/17457085/262032
 
-#if NETSTANDARD1_4 || NETSTANDARD2_0
+#if NETSTANDARD2_0
             var type = typeof(StreamReader).GetTypeInfo();
             char[] charBuffer = (char[])type.GetDeclaredField("_charBuffer").GetValue(reader);
             int charPos = (int)type.GetDeclaredField("_charPos").GetValue(reader);
@@ -333,7 +327,6 @@ namespace Accord
             return reader.BaseStream.Position - byteLen + numReadBytes;
         }
 
-#if !NETSTANDARD1_4
 
         private static object GetField(StreamReader reader, string name)
         {
@@ -357,7 +350,6 @@ namespace Accord
         {
             return Serializer.Load<T>(stream);
         }
-#endif
 
         /// <summary>
         ///   Converts an object into another type, irrespective of whether
@@ -461,16 +453,7 @@ namespace Accord
         /// 
         public static bool HasDefaultConstructor(this Type t)
         {
-#if NETSTANDARD1_4
-            var info = t.GetTypeInfo();
-            if (info.IsValueType)
-                return true;
-
-            ConstructorInfo ctors = info.DeclaredConstructors.Where(x => x.GetParameters().Length == 0).FirstOrDefault();
-            return ctors != null;
-#else
             return t.IsValueType || t.GetConstructor(Type.EmptyTypes) != null;
-#endif
         }
 
 
@@ -492,7 +475,6 @@ namespace Accord
             return String.Format(str, args);
         }
 
-#if !NETSTANDARD1_4
 
         /// <summary>
         ///   Checks whether two dictionaries have the same contents.
@@ -562,7 +544,6 @@ namespace Accord
                 return true;
             }
         }
-#endif
 
 
         /// <summary>
@@ -605,7 +586,6 @@ namespace Accord
             return a.CompareTo(b) <= 0;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Gets the default value for a type. This method should serve as
         ///   a programmatic equivalent to <c>default(T)</c>.
@@ -623,9 +603,7 @@ namespace Accord
                 return Activator.CreateInstance(type);
             return null;
         }
-#endif
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Retrieves the memory address of a generic value type.
         /// </summary>
@@ -633,9 +611,7 @@ namespace Accord
         /// <typeparam name="T">The type of the object whose address needs to be retrieved.</typeparam>
         /// <param name="t">The object those address needs to be retrieved.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static System.IntPtr AddressOf<T>(this T t)
         {
             unsafe
@@ -652,9 +628,7 @@ namespace Accord
         /// <typeparam name="T">The type of the object whose address needs to be retrieved.</typeparam>
         /// <param name="t">The object those address needs to be retrieved.</param>
         /// 
-#if NET45 || NET46 || NET462 || NETSTANDARD2_0
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         static System.IntPtr AddressOfRef<T>(ref T t)
         {
             unsafe
@@ -664,7 +638,6 @@ namespace Accord
                 return (System.IntPtr)pRef; //(&pRef)
             }
         }
-#endif
 
         // TODO: Move this method to a more appropriate location
         internal static WebClient NewWebClient()
@@ -700,11 +673,7 @@ namespace Accord
                 catch (WebException)
                 {
                     int milliseconds = numberOfAttempts * 2000;
-#if NETSTANDARD1_4
-                    Task.Delay(milliseconds).Wait();
-#else
                     Thread.Sleep(milliseconds);
-#endif
                     if (numberOfAttempts == maxAttempts)
                         throw;
                 }

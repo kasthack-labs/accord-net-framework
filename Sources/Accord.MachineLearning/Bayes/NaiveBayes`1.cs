@@ -350,7 +350,6 @@ namespace Accord.MachineLearning.Bayes
             responses = Special.Softmax(ll);
             return imax;
         }
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Saves the Naïve Bayes model to a stream.
         /// </summary>
@@ -376,7 +375,6 @@ namespace Accord.MachineLearning.Bayes
         {
             Accord.IO.Serializer.Save(this, path);
         }
-#endif
         /// <summary>
         ///   Constructs a new Naïve Bayes Classifier.
         /// </summary>

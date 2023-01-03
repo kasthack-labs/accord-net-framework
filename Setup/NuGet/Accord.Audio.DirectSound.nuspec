@@ -15,13 +15,7 @@
     <summary>Play and record audio using DirectSound.</summary>
     <tags>accord.net aforge.net framework computer audition audio processing wave capture</tags>
     <dependencies>
-      <group targetFramework="net35">
-        <dependency id="Accord"               version="$version$" />
-        <dependency id="Accord.Math"          version="$version$" />
-        <dependency id="Accord.Audio"         version="$version$" />
-        <dependency id="SharpDX.DirectSound"  version="2.6.3" />
-      </group>
-      <group targetFramework="net45">
+      <group targetFramework="net48">
         <dependency id="Accord"               version="$version$" />
         <dependency id="Accord.Math"          version="$version$" />
         <dependency id="Accord.Audio"         version="$version$" />

@@ -275,15 +275,8 @@ namespace Accord.Statistics.Distributions.Reflection
             // given interface. 
 
             // Get all univariate distributions in Accord.NET:
-#if NETSTANDARD1_4
-            var baseInfo = baseType.GetTypeInfo();
-            var distributions = baseInfo.Assembly.DefinedTypes
-                .Where(p => baseInfo.IsAssignableFrom(p) && !p.IsAbstract && !p.IsInterface)
-                .Select(p => p.AsType());
-#else
             var distributions = Assembly.GetAssembly(baseType).GetTypes().Where(p =>
                 baseType.IsAssignableFrom(p) && !p.IsAbstract && !p.IsInterface);
-#endif
 
             return distributions.ToArray();
         }

@@ -32,10 +32,8 @@ namespace Accord.MachineLearning
     using Accord.Compat;
     using System.Threading.Tasks;
 
-#if !NET35 && !NET40
     using System.Collections.ObjectModel;
     using System.Text.RegularExpressions;
-#endif
 
     /// <summary>
     ///   Bag of words.

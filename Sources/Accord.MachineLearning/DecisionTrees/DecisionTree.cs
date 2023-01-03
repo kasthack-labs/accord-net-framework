@@ -483,7 +483,6 @@ namespace Accord.MachineLearning.DecisionTrees
             return DecisionSet.FromDecisionTree(this);
         }
 
-#if !NET35 && !NETSTANDARD1_4
         /// <summary>
         ///   Creates an <see cref="Expression">Expression Tree</see> representation
         ///   of this decision tree, which can in turn be compiled into code.
@@ -495,8 +494,7 @@ namespace Accord.MachineLearning.DecisionTrees
         {
             return new DecisionTreeExpressionCreator(this).Create();
         }
-
-#if !NETSTANDARD2_0
+#if !(NETSTANDARD2_0 || NETSTANDARD2_1)
         /// <summary>
         ///   Creates a .NET assembly (.dll) containing a static class of
         ///   the given name implementing the decision tree. The class will
@@ -537,7 +535,6 @@ namespace Accord.MachineLearning.DecisionTrees
             dt.CreateType();
             da.Save(assemblyName);
         }
-#endif
 #endif
 
 
@@ -606,7 +603,6 @@ namespace Accord.MachineLearning.DecisionTrees
 
 
         #region Obsolete
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Obsolete. Please use <see cref="Accord.IO.Serializer.Save{T}(T, string)"/> (or use it as an extension method).
         /// </summary>
@@ -646,7 +642,6 @@ namespace Accord.MachineLearning.DecisionTrees
         {
             return Accord.IO.Serializer.Load<DecisionTree>(path);
         }
-#endif
 
         /// <summary>
         ///   Deprecated. Please use the NumberOfOutputs property instead.

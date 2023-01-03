@@ -198,7 +198,6 @@ namespace Accord.Statistics.Filters
         {
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Creates a new Codification Filter.
         /// </summary>
@@ -216,7 +215,6 @@ namespace Accord.Statistics.Filters
             : base(data, columns)
         {
         }
-#endif
 
         /// <summary>
         ///   Creates a new Codification Filter.
@@ -304,7 +302,6 @@ namespace Accord.Statistics.Filters
             return Transform(data);
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Translates an array of values into their
         ///   integer representation, assuming values
@@ -324,7 +321,6 @@ namespace Accord.Statistics.Filters
         {
             return Transform(row, columnNames);
         }
-#endif
 
         /// <summary>
         ///   Translates a value of the given variables
@@ -431,7 +427,6 @@ namespace Accord.Statistics.Filters
             return Revert(columnNames, codewords);
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Auto detects the filter options by analyzing a given <see cref="System.Data.DataTable"/>.
         /// </summary> 
@@ -450,7 +445,6 @@ namespace Accord.Statistics.Filters
         {
             Learn(data);
         }
-#endif
 
         /// <summary>
         ///   Auto detects the filter options by analyzing a set of string labels.

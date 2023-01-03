@@ -46,11 +46,7 @@ namespace Liblinear
     using Machine = Accord.MachineLearning.VectorMachines.SupportVectorMachine<Accord.Statistics.Kernels.Linear, Accord.Math.Sparse<double>>;
     using Solver = Accord.MachineLearning.ISupervisedLearning<Accord.MachineLearning.VectorMachines.SupportVectorMachine<Accord.Statistics.Kernels.Linear, Accord.Math.Sparse<double>>, Accord.Math.Sparse<double>, bool>;
 
-#if NET35
-    using NS = Accord.Compat;
-#else
     using NS = System;
-#endif
 
 
     public class Train
@@ -68,7 +64,7 @@ namespace Liblinear
 
         public void Main(params string[] args)
         {
-#if NETSTANDARD1_4 || NETCORE
+#if NETCORE
             CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
             CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 #else

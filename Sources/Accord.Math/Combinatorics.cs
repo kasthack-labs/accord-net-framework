@@ -501,11 +501,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static IEnumerable<SortedSet<T>> Subsets<T>(this
-#if NET35
-            IEnumerable<T>
-#else
             ISet<T>
-#endif
             set, bool inPlace = false)
         {
             // TODO: Optimize
@@ -524,11 +520,7 @@ namespace Accord.Math
         /// </example>
         /// 
         public static IEnumerable<SortedSet<T>> Subsets<T>(this
-#if NET35
-            IEnumerable<T>
-#else
             ISet<T>
-#endif
             set, int k, bool inPlace = false)
         {
             // TODO: Optimize

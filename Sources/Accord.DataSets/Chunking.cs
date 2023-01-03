@@ -129,17 +129,10 @@ namespace Accord.DataSets
             var currentWords = new List<string>();
             var currentTags = new List<string>();
 
-#if NET35
-            foreach (string line in File.ReadAllLines(uncompressedFileName))
-            {
-                if (StringEx.IsNullOrWhiteSpace(line))
-                {
-#else
             foreach (string line in File.ReadLines(uncompressedFileName))
             {
                 if (String.IsNullOrWhiteSpace(line))
                 {
-#endif
                     sentences.Add(currentWords.ToArray());
                     tags.Add(currentTags.ToArray());
 

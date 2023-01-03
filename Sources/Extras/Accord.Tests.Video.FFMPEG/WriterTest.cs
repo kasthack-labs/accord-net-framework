@@ -43,11 +43,7 @@ namespace Accord.Tests.Video
         public void framework_version_test()
         {
             string actual = typeof(VideoFileWriter).Assembly.ImageRuntimeVersion;
-#if NET35
-            Assert.AreEqual("v2.0.50727", actual);
-#else
             Assert.IsTrue(actual.StartsWith("v4"));
-#endif
         }
 
         [Test]

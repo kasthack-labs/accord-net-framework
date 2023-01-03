@@ -481,7 +481,6 @@ namespace Accord.Statistics.Models.Fields
             return logLikelihoods;
         }
 
-#if !NETSTANDARD1_4
         /// <summary>
         ///   Saves the random field to a stream.
         /// </summary>
@@ -533,7 +532,6 @@ namespace Accord.Statistics.Models.Fields
         {
             return Accord.IO.Serializer.Load<HiddenConditionalRandomField<T>>(path);
         }
-#endif
 
 #region ICloneable Members
 
