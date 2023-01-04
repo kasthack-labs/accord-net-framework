@@ -1568,14 +1568,8 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1">
-      <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SharpDX.DirectSound, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1">
-      <HintPath>..\..\..\Externals\SharpDX\v401\net45\SharpDX.DirectSound.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="SharpDX" Version="4.0.1" />
+    <PackageReference Include="SharpDX.DirectSound" Version="4.0.1" />
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
       <Name>System</Name>
       <AssemblyName>System.dll</AssemblyName>
@@ -1594,10 +1588,7 @@
       <HintPath>..\..\..\..\..\..\..\..\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60">
-      <HintPath>..\..\..\Externals\ZedGraph\ZedGraph.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="ZedGraph" Version="5.1.7" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Building.txt" />
