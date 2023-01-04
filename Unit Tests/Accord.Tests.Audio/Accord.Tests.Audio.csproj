@@ -25,14 +25,8 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.3.1" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SharpDX">
-      <HintPath>..\..\Externals\SharpDX\v401\net45\SharpDX.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="SharpDX.DirectSound">
-      <HintPath>..\..\Externals\SharpDX\v401\net45\SharpDX.DirectSound.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <PackageReference Include="SharpDX" Version="4.0.1" />
+    <PackageReference Include="SharpDX.DirectSound" Version="4.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
