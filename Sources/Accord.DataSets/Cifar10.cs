@@ -87,7 +87,9 @@ namespace Accord.DataSets
             // Unpack the .tar
             string destinationFolder = uncompressedFileName.Remove(uncompressedFileName.Length - 4, 4);
             using (var inputStream = new FileStream(uncompressedFileName, FileMode.Open, FileAccess.Read))
+#pragma warning disable 0618 // Upgrading from legacy version.
             using (TarArchive tarArchive = TarArchive.CreateInputTarArchive(inputStream))
+#pragma warning restore 0618
             {
                 tarArchive.ExtractContents(destinationFolder);
             }
